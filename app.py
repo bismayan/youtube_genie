@@ -147,13 +147,13 @@ def main():
                 with col:
                     question_input = st.text_input("What would you like to know about the Video?")
                     question_button = st.button("Submit Question")
-                if question_button:
-                    with st.spinner(text="Doing Genie things..."):
-                        response, docs = get_response_to_question(question=question_input, db=db,title=title, k=k, temp=temp)
-                        print(docs)
-                        st.success(response)
-                    with st.expander("Relevant Bits of Transcript"):
-                        st.text(docs)
+                    if question_button:
+                        with st.spinner(text="Doing Genie things..."):
+                            response, docs = get_response_to_question(question=question_input, db=db,title=title, k=k, temp=temp)
+                            print(docs)
+                            st.success(response)
+                        with st.expander("Relevant Bits of Transcript"):
+                            st.text(docs)
                 
 
 if __name__ == "__main__":
