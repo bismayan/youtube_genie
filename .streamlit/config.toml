@@ -3,3 +3,6 @@ primaryColor="#6160bf"
 backgroundColor="#fefeff"
 secondaryBackgroundColor="#dddff3"
 textColor="#120000"
+
+[logger]
+level="error"
